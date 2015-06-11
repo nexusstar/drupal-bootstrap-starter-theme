@@ -10,6 +10,7 @@ var plug = require('gulp-load-plugins')();
 var merge = require("merge-stream");
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-sass');
 
 var colors = plug.util.colors;
 var log = plug.util.log;
