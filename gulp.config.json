@@ -1,0 +1,6 @@
+{
+  "bootstrap":"./lib/bootstrap-sass",
+  "fontawesome":[
+    "./lib/fontawesome/fonts/**/*.*"
+  ]
+}

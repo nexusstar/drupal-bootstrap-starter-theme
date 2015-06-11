@@ -1,0 +1,10 @@
+@import 'theme/variables';
+
+//Import bootstrap
+@import '../lib/bootstrap-sass/assets/stylesheets/bootstrap';
+
+//Import fontawesome
+@import '../lib/fontawesome/scss/font-awesome';
+
+//Theme specific
+@import 'theme/overrides';

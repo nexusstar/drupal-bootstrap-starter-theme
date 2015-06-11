@@ -1,0 +1,8 @@
+# Ignore IDE
+###################
+.idea
+
+# Ignore Node & Bower
+###################
+lib
+node_modules
