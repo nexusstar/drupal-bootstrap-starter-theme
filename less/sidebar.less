@@ -1,0 +1,32 @@
+/* Node body sidebar */
+
+.field-name-body{
+  .sidebar{
+    margin: @line-height-computed 0 (@line-height-computed / 2);
+
+    & > div{
+      background-color: @gray-lighter;
+      padding:@padding-base-vertical @padding-base-horizontal;
+    }
+
+
+    & > div > ul > li{
+      text-transform:uppercase;
+      font-weight: 700;
+      margin: @line-height-computed 0 (@line-height-computed / 2);
+    }
+    ul > li > ul{
+      padding-left:0.5em;
+       & > li{
+         text-transform: none;
+         font-weight: 700;
+       }
+    }
+    ul > li > ul > li > ul{
+      padding-left: 1em;
+      & > li{
+        font-weight:400;
+      }
+    }
+  }
+}

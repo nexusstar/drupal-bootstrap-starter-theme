@@ -1,0 +1,48 @@
+// Insert your styling here.
+.footer{
+  background-color: @gray-lighter;
+  font-size:@font-size-small;
+  color:#fff;
+
+  > .container{
+    background-color: @icapital-blue;
+  }
+
+  ul.nav{
+    font-size:@font-size-small;
+    float: right;
+    li{
+      float:left;
+    }
+  }
+  #block-menu-menu-footer-extra-info{
+    ul.nav{
+      font-size:@font-size-xs;
+      float:left;
+    }
+  }
+
+  p{
+    line-height:40px;
+  }
+
+  .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: @gray-lighter;
+    font-size:@font-size-small;
+  }
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+  }
+  .nav > li > a:hover,
+  .nav > li > a:focus,
+  .nav > li.active-trail > a {
+    text-decoration: none;
+    color:@icapital-cyan;
+    background-color: transparent;
+  }
+
+}
+

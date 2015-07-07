@@ -1,0 +1,73 @@
+//
+// Highligthed Region Styles
+// --------------------------------------------------
+// 
+
+.highlighted-container{
+	position: relative;
+	margin: 0 0 @grid-gutter-width;
+
+	li .container{
+		position:relative;
+	}
+
+}
+
+.highlighted-extra {
+
+	position: absolute;
+	top:0;
+	height:100%;
+	width:300px;
+	background:fade(@icapital-blue, 95%);
+	.lh-box-shadow(0 0 5px rgba(0, 0, 0, .75));
+	z-index: 100;
+
+	.block{
+		
+		padding: @padding-large-vertical @padding-large-horizontal;
+		color:#fff;
+
+		.title{
+			border-bottom:1px solid #fff;
+			margin-top:12px;
+		}
+
+		li > a{
+			color:#fff;
+			font-size: @font-size-large;
+			font-family: @headings-font-family;
+		}
+
+		ul li > ul{
+			margin-left: @padding-large-horizontal;
+			& >li{
+				font-size:@font-size-small;
+			}
+
+			& > li > a{
+				font-size: @font-size-base;
+				color:@icapital-cyan;
+			}
+		}
+
+	}
+	
+
+}
+
+
+.slide-elements{
+	position:absolute;
+	top:-230px;
+	right:15px;
+  	width:40%;
+  	text-align: right;
+
+	h1{
+		font-family:@font-family-base;
+		font-weight: 400;
+		color:@icapital-cyan;
+		text-shadow: 0 1px 0 rgba(0,0,0, 0.15);
+	}
+}

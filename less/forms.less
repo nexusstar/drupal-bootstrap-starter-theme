@@ -1,0 +1,99 @@
+//
+// Forms
+// --------------------------------------------------
+
+.form-control {
+  .form-control-focus(#66AFE9);
+}
+
+form > .panel-body{
+  .make-row();
+}
+
+form .panel-body > fieldset{
+  .make-md-column(6);
+  padding:(@grid-gutter-width/2);
+  border-color:transparent;
+
+  .webform-component{
+    margin-top: 0.5em;
+  }
+
+}
+
+.webform-datepicker {
+
+  .make-row();
+
+  .form-item{
+    .make-md-column(4);
+  }
+
+}
+
+input.webform-calendar{
+  float:right;
+  margin-right:15px;
+}
+.webform-progressbar{
+  margin-bottom:1em;
+}
+.webform-progressbar-outer{
+  border-color:@gray-light;
+}
+.webform-progressbar-page .webform-progressbar-page-number{
+  display:block;
+  border:1px solid @gray-lighter;
+  background-color: @gray-lighter;
+  margin: -12px -20px;
+  border-radius: 4px;
+  color:@gray-light;
+  .lh-box-shadow(0 0 3px rgba(0, 0, 0, 0.35));
+}
+.current.webform-progressbar-page .webform-progressbar-page-number{
+  background-color: @gray-light;
+  .lh-box-shadow(0 0 7px rgba(0, 0, 0, 0.35));
+  color:#fff;
+}
+.webform-draft{
+  float:right;
+}
+.webform-steps-wrapper{
+  display:none;
+}
+
+.address{
+  margin-bottom:1em;
+  border-bottom:1px solid @gray-lighter;
+  .form-item{
+    label{
+      font-weight: 400;
+      padding-left:1em;
+    }
+  }
+}
+.webform-component--contacting-data--phone{
+  input{
+    width:100%;
+  }
+}
+
+.form-checkboxes{
+  .checkbox input[type="checkbox"]{
+    margin-left: 0;
+  }
+}
+.form-radios{
+  .radio input[type="radio"]{
+    margin-left: 0;
+  }
+}
+
+.form-item > label{
+  margin-top:1em;
+}
+.form-item.checkbox, .form-item.radio{
+  label{
+    margin-top:0;
+  }
+}

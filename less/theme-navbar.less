@@ -1,0 +1,208 @@
+//
+// Navbars Override
+// --------------------------------------------------
+
+// Default navbar
+.navbar-default {
+
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #e9f4fb 0%, #ffffff  20%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9f4fb), color-stop(20%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #e9f4fb 0%,#ffffff 20%); /* Chrome20+,Safari5.1+ */
+	background: -o-linear-gradient(top, #e9f4fb 0%,#ffffff 20%); /* Opera 11.20+ */
+	background: -ms-linear-gradient(top, #e9f4fb 0%,#ffffff 20%); /* IE20+ */
+	background: linear-gradient(to bottom, #e9f4fb 0%,#ffffff 20%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f4fb', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+
+	border-color: @navbar-default-border;
+	
+	.logo-bar{
+		padding: 0  15px;
+		margin: 0.5em 0 1em;
+	}
+
+	ul.navbar-nav{
+		
+		> li {
+				margin-left:1px;
+				background: transparent;
+
+                &:last-of-type{ margin-right: 0; }
+
+				> a {
+                      padding: 10px 7px;
+                      font-size:@font-size-small;
+                      font-family: "Roboto Condensed", sans-serif;
+					  color:@brand-primary;
+                      .lh-transition (all 0.45s ease-in-out);
+
+					  &::after{
+							position: absolute;
+							bottom: 0;
+							display: block;
+							content: "";
+							width: 0px;
+							height: 4px;
+							background-color: #fff;
+							.lh-transition (all 0.45s ease-in-out);
+					  }
+				}
+				
+				> a:hover {
+					background-color:@icapital-cyan!important;
+					color:#fff!important;
+
+					&::after{
+						width: 55%;
+					}
+				}
+
+				&.active {
+
+					> a, > a:hover { 
+						background: transparent;
+						color: @brand-primary;
+						
+						&::after{
+							position: absolute;
+							bottom: 0;
+							display: block;
+							content: "";
+							width: 75%;
+							height: 4px;
+							background-color: @icapital-cyan;
+							
+					  } 
+					}
+				}
+		}
+
+	}
+}
+
+/*
+* When page is scrolled down is added .stickit
+*/
+.stickit #navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:200;
+
+  .box-shadow(0 1px 15px rgba(0,0,0, 0.15));
+  background: rgba(255,255,255, 0.85);
+
+  .logo{
+
+    margin-top:7px;
+    margin-bottom:12px;
+
+    img{
+      height: 50px;
+    }
+  }
+
+  .menu.navbar-nav {
+    font-size:@font-size-small;
+  }
+  .language-switcher-locale-url{
+    font-size:12px;
+    padding:0;
+  }
+  .navbar-nav > li > a{
+    padding:@padding-base-vertical @padding-base-horizontal;
+  }
+}
+
+.region-language-bar .block-menu{
+  font-size:@font-size-small;
+  float:right;
+  
+  & ul.menu{
+      list-style:none;
+      padding:3px 0;
+      margin:0;
+
+	> li{
+	  float: left;
+	}
+
+	li:last-of-type{
+	  margin-right:0;
+	}
+  }
+
+   & > ul.menu > li > a{
+	padding:5px 15px;
+	margin-left:1em;
+	background-color: @icapital-cyan;
+	color:#fff;
+
+	&:hover{
+	  text-decoration:none;
+	  background-color:@brand-primary!important;
+	  color:#fff;
+      .lh-box-shadow(0 0 3px rgba(0, 0, 0, 0.35));
+	}
+    &::after{
+      background-color:transparent;
+    }
+  }
+  & > ul.menu > li.collapsed > a{
+    padding-right:30px;
+  }
+  & ul.menu > li.expanded::after{
+	  content:'\f0d7';
+	  font-family:'FontAwesome';
+	  position:absolute;
+	  height:30px;
+	  width:20px;
+	  line-height:30px;
+	  color:white;
+	  right:0;
+	  top:0;
+	}
+  & ul.menu > li.expanded > ul{
+    display:none;
+    transition: 0.2s 1s;
+  }
+
+  & ul.menu > li.expanded:hover > ul{
+    transition-delay:0s;
+    display:block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+  }
+  & ul.menu > li.expanded ul.menu >li{
+    float:none;
+    width:100%;
+    line-height:1.5em;
+  }
+
+}
+
+.stickit #account-management.navbar-nav > li > a {
+  padding: 2px 10px;
+}
+.stickit #account-management.navbar-nav > li.collapsed > a{
+  padding-right: 30px;
+}
